@@ -1,0 +1,20 @@
+.certificates ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.certificates li {
+    flex-basis: 50%;
+    padding-bottom: 1.5rem;
+}
+
+.certificates li p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.certificates li h4 {
+    color: gray;
+    font-weight: normal;
+    font-size: 0.9rem;
+}

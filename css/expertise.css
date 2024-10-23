@@ -1,0 +1,14 @@
+.expertise {
+    margin: 1.2rem 0;
+}
+.expertise ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.expertise li {
+    background-color: rgba(0, 200, 170, 0.4);
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+}

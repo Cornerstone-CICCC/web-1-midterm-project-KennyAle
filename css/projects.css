@@ -1,0 +1,14 @@
+.projects article p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.projects li {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.projects li::before {
+    content: "- ";
+    color: #00c8aa;
+}

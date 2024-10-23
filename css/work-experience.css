@@ -1,0 +1,22 @@
+.work-experience h4{
+    color: gray;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.work-experience article div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-experience article li {
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+    text-wrap: pretty;
+}
+
+.work-experience article li::before {
+    content: "- ";
+    font-size: 1.5rem;
+}

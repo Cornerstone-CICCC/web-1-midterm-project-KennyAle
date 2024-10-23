@@ -10,25 +10,30 @@ ul {
 
 a {
     text-decoration: none;
-}
-
-h2 {
-    color: #00c8aa;
+    color: black;
 }
 
 body {
     font-family: system-ui, sans-serif;
+    padding: 1rem;
+    margin: auto;
+}
+
+.container {
+    max-width: 700px;
+    margin: 1.2rem auto;
 }
 
 .title {
-    padding: 0.8rem 0;
+    padding-bottom: 0.8rem;
     font-weight: bold;
     font-size: 1.4rem;
     text-transform: uppercase;
 }
 
-.education {
-    
+.education li h4 {
+    color: gray;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
 }
-
-

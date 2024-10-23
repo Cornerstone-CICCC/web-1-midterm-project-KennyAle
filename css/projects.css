@@ -1,14 +1,41 @@
+.projects div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.projects article {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 0.8rem 0.8rem 0.8rem;
+    border-radius: 8px;
+    flex-basis: 30%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .projects article p {
     font-size: 0.9rem;
-    font-weight: 600;
+    text-wrap: balance;
 }
 
-.projects li {
+.projects img {
+    width: calc(100% + 0.8rem*2);
+    margin-left: -0.8rem;
+}
+
+.projects .tags {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.projects .tags li {
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    background-color: rgba(196, 196, 196, 0.2);
     font-size: 0.9rem;
-    margin-left: 0.5rem;
-}
-
-.projects li::before {
-    content: "- ";
-    color: #00c8aa;
+    font-weight: 600;
 }

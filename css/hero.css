@@ -1,13 +1,12 @@
 .hero {
     display: flex;
-    flex-direction: row-reverse;
     gap: 1.5rem;
 }
 
 .hero article {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.4rem;
 }
 
 .hero p {
@@ -29,18 +28,24 @@
     border-radius: 10px;
 }
 
-.socials {
-    margin: 1.2rem 0;
-    background-color: rgb(196, 196, 196, 0.3);
-    padding: 0.4rem 1rem;
+.hero span {
+    margin-inline: -0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 
-.socials ul {
+.hero ul {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.7rem;
 }
 
-.socials li {
-    width: 50%;
-    padding: 0.3rem 0;
+.hero li {
+    margin-top: 1rem;
+}
+
+.hero li a {
+    display: flex;
+    align-items: center;
 }

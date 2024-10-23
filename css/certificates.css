@@ -1,11 +1,12 @@
 .certificates ul {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    row-gap: 1.7rem;
 }
 
 .certificates li {
-    flex-basis: 50%;
-    padding-bottom: 1.5rem;
+    flex-basis: 40%;
 }
 
 .certificates li p {
@@ -15,6 +16,7 @@
 
 .certificates li h4 {
     color: gray;
+    font-style: italic;
     font-weight: normal;
     font-size: 0.9rem;
 }

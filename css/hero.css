@@ -35,7 +35,7 @@
     gap: 0.3rem;
 }
 
-.hero ul {
+.hero .socials {
     display: flex;
     flex-wrap: wrap;
     gap: 0.7rem;
@@ -48,4 +48,9 @@
 .hero li a {
     display: flex;
     align-items: center;
+    gap: 1rem;
+}
+
+.hero .socials-print {
+    display: none;
 }

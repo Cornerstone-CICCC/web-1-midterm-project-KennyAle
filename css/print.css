@@ -1,0 +1,22 @@
+@media print {
+    .hero .socials {
+        display: none;
+    }
+
+    .hero .socials-print {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .hero .socials-print li {
+        flex-basis: 40%;
+    }
+    
+    .projects article {
+        padding: 0.8rem;
+    }
+    .projects img {
+        display: none;
+    }
+}

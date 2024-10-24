@@ -17,7 +17,7 @@
 
 .projects article p {
     font-size: 0.9rem;
-    text-wrap: balance;
+    text-wrap: pretty;
 }
 
 .projects img {

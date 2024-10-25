@@ -4,7 +4,7 @@ const icons = {
                     class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
                     <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                     <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                </svg>`
+                </svg>`,
 }
 
 let portfolioData
@@ -15,9 +15,9 @@ async function fetchData() {
     } else {
         portfolioData = await response.json()
         heroSection()
-        expertiseSection()
-        workSection()
         skillSection()
+        workSection()
+        expertiseSection()
         certificateSection()
         projectSection()
         educationSection()
@@ -42,7 +42,7 @@ function heroSection() {
     portfolioData.info.socials.forEach(element => {
         let social = document.createElement("li")
         social.innerHTML = `
-            <a>
+            <a href="${element[3]}">
             ${element[2]}
             </a>
             `

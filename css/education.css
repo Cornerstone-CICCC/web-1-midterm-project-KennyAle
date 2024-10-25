@@ -1,0 +1,24 @@
+.education ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.education ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.education ul div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.education li h4 {
+    color: gray;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
+}

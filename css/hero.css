@@ -41,8 +41,12 @@
     gap: 0.7rem;
 }
 
+.hero span p {
+    border-bottom: 1px solid;
+}
+
 .hero li {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .hero li a {
@@ -53,4 +57,14 @@
 
 .hero .socials-print {
     display: none;
+}
+
+.hero .socials a {
+    padding: 0.25rem;
+    transition: transform 110ms ease-out;
+}
+
+.hero .socials a:hover {
+    padding: 0.25rem;
+    transform: scale(1.3);
 }

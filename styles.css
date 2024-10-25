@@ -6,11 +6,16 @@
 
 ul {
     list-style-type: none;
+    cursor: default;
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+h1, h2, h3, p {
+    cursor: default;
 }
 
 body {
@@ -25,7 +30,7 @@ body .container:first-of-type {
 
 .container {
     max-width: 700px;
-    margin: 1.2rem auto;
+    margin: 2rem auto;
 }
 
 .title {

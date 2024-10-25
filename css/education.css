@@ -45,3 +45,7 @@
     font-weight: normal;
     font-size: 0.9rem;
 }
+
+.education p {
+    text-wrap: pretty;
+}

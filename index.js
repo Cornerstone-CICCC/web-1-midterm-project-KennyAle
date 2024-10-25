@@ -49,11 +49,27 @@ function heroSection() {
         socialsContainer.appendChild(social)
     })
 
+    const socialsPrint = document.createElement("ul")
+    socialsPrint.classList.add("socials-print")
+    portfolioData.info.socials.forEach(element => {
+        if (element.includes("print")) {
+            let social = document.createElement("li")
+            social.innerHTML = `
+            <a>
+            ${element[2]}${element[1]}
+            </a>
+            `
+            socialsPrint.appendChild(social)
+        }
+
+    })
+
     const heroPicture = document.createElement("figure")
     heroPicture.innerHTML = `
     <img src="${portfolioData.info.picture}" alt="Prophile Picture">
     `
 
+    article.appendChild(socialsPrint)
     article.appendChild(socialsContainer)
     hero.appendChild(article)
     hero.appendChild(heroPicture)
@@ -65,7 +81,7 @@ function expertiseSection() {
     expertise.classList.add("expertise", "container")
     expertise.innerHTML = `
         <h2 class="title">Areas of Expertise</h2>
-    ` 
+    `
     const list = document.createElement("ul")
     portfolioData.expertise.forEach(element => {
         let expertiseLi = document.createElement("li")
@@ -184,7 +200,8 @@ function educationSection() {
                     <h4>${school.institution}</h4>
                     <h4>${school.duration}</h4>
                 </div>
-                <p>${school.details}</p>
+                <p>${school.details[0]}</p>
+                <p>${school.details[1]}</p>
         `
         educationList.appendChild(eduLi)
     })

@@ -19,6 +19,10 @@ body {
     margin: auto;
 }
 
+body .container:first-of-type {
+    margin: 0.5rem auto;
+}
+
 .container {
     max-width: 700px;
     margin: 1.2rem auto;
@@ -29,11 +33,4 @@ body {
     font-weight: bold;
     font-size: 1.4rem;
     text-transform: uppercase;
-}
-
-.education li h4 {
-    color: gray;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 0.9rem;
 }

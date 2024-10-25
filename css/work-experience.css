@@ -5,6 +5,14 @@
     font-size: 0.9rem;
 }
 
+.work-experience article {
+    padding-bottom: 1rem;
+}
+
+.work-experience article:last-of-type {
+    padding-bottom: 0;
+}
+
 .work-experience article div {
     display: flex;
     justify-content: space-between;

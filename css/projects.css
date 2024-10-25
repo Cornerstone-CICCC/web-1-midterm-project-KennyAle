@@ -1,7 +1,12 @@
-.projects div {
+.projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.8rem;
+    gap: 1rem;
+}
+
+.projects .title {
+    padding-bottom: 0;
+    flex-basis: 100%;
 }
 
 .projects article {

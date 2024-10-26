@@ -17,9 +17,9 @@
 
     .hero .socials-print {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         row-gap: 0.7rem;
-        flex-wrap: wrap;
+        text-decoration: underline;
     }
     
     .hero .socials-print li {
@@ -27,6 +27,10 @@
     }
     
     .work-experience {
+        break-after: page;
+    }
+
+    .projects {
         break-after: page;
     }
 

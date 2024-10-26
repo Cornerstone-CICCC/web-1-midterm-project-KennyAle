@@ -42,7 +42,7 @@
 }
 
 .hero span p {
-    border-bottom: 1px solid;
+    text-decoration: underline;
 }
 
 .hero li {

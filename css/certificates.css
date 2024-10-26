@@ -8,27 +8,19 @@
 .certificates li {
     padding: 0.5rem 1rem;
     flex-basis: 45%;
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 0.4rem;
     position: relative;
-    transition: all 250ms ease-out;
+    transition: all 150ms ease-out;
 }
 
-.certificates li p {
+.certificates li:hover {
+    border: 1px solid black;
     text-decoration: underline;
 }
 
 .certificates li > * {
     cursor: pointer;
-}
-
-.certificates li::after {
-    content: url("data:image/svg+xml;base64,PHN2ZyAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgd2lkdGg9IjI0IiAgaGVpZ2h0PSIyNCIgIHZpZXdCb3g9IjAgMCAyNCAyNCIgIGZpbGw9Im5vbmUiICBzdHJva2U9ImN1cnJlbnRDb2xvciIgIHN0cm9rZS13aWR0aD0iMS41IiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgIGNsYXNzPSJpY29uIGljb24tdGFibGVyIGljb25zLXRhYmxlci1vdXRsaW5lIGljb24tdGFibGVyLWV4dGVybmFsLWxpbmsiPjxwYXRoIHN0cm9rZT0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0xMiA2aC02YTIgMiAwIDAgMCAtMiAydjEwYTIgMiAwIDAgMCAyIDJoMTBhMiAyIDAgMCAwIDIgLTJ2LTYiIC8+PHBhdGggZD0iTTExIDEzbDkgLTkiIC8+PHBhdGggZD0iTTE1IDRoNXY1IiAvPjwvc3ZnPg==");
-    position: absolute;
-    bottom: 0.05rem;
-    right: 0.15rem;
-    cursor: pointer;
-    animation: beating 1.3s ease-out infinite;
 }
 
 .certificates li:hover::after {
@@ -37,7 +29,6 @@
     bottom: 0.05rem;
     right: 0.15rem;
     cursor: pointer;
-    animation: beating 1.3s ease-out infinite;
 }
 
 .certificates li p {
@@ -51,12 +42,3 @@
     font-weight: normal;
     font-size: 0.9rem;
 }
-
-@keyframes beating {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.07);
-    }
-  }

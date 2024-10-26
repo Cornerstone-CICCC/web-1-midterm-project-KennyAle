@@ -18,8 +18,8 @@ async function fetchData() {
         skillSection()
         workSection()
         expertiseSection()
-        certificateSection()
         projectSection()
+        certificateSection()
         educationSection()
     }
 }

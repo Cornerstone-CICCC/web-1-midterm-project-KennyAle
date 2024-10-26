@@ -12,26 +12,54 @@
 .projects article img {
     border-radius: 8px 8px 0 0;
     cursor: pointer;
+    object-fit: contain;
 }
 
 .projects article {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0 0.8rem 0.8rem 0.8rem;
     border-radius: 8px;
+    position: relative;
     flex-basis: 30%;
-    min-height: 200px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    transition: all 200ms;
 }
 
 .projects article:hover {
     border: 1px solid rgba(0, 0, 0, 1);
 }
 
+.projects article .github {
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    opacity: 0;
+    transition: 150ms ease-in;
+}
+
+.projects article .github:hover {
+    transform: scale(1.1);
+}
+
+.projects article:hover .github{
+    opacity: 1;
+}
+
+.projects .github svg {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
 .projects article p {
     font-size: 0.9rem;
     text-wrap: pretty;
+}
+
+.projects article h4 {
+    cursor: default;
 }
 
 .projects img {

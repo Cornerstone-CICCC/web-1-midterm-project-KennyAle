@@ -42,4 +42,15 @@
     .projects img {
         display: none;
     }
+
+    .certificates li {
+        border: 0;
+    }
+    .certificates li p{
+        text-decoration: underline;
+    }
+
+    .certificates li::after {
+        content: ""
+    }
 }

@@ -15,11 +15,10 @@
 }
 
 .certificates li:hover {
-    border: 1px solid black;
-    text-decoration: underline;
+    border: 1px solid;
 }
 
-.certificates li > * {
+.certificates li {
     cursor: pointer;
 }
 
@@ -34,6 +33,8 @@
 .certificates li p {
     font-size: 0.9rem;
     font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .certificates li h4 {

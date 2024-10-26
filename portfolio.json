@@ -3,8 +3,8 @@
         "name": "Kenny Viver",
         "title": "Front End Developer",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cumque quod explicabo deserunt fugit laborum ipsum dolor sit amet.",
-        "picture": "https://placehold.co/120x120",
-        "location": "Vancouver, British Columbia",
+        "picture": "images/profile.jpg",
+        "location": "Vancouver, British Columbia, CA",
         "socials": [
             [
                 "email",
@@ -102,81 +102,104 @@
         {
             "name": "Front-End Web Development Certificate",
             "date": "March 2023",
-            "url": ""
+            "url": "https://drive.google.com/file/d/1e2LXGZm9bnAVsNgWAczKQ5G731CQIQdQ/view?usp=drive_link"
         },
         {
             "name": "JavaScript Algorithms and Data Structures",
             "date": "June 2023",
-            "url": ""
+            "url": "https://drive.google.com/file/d/1CWpeutG9viTGDljEycQ9WEafjItQHrGB/view?usp=sharing"
         },
         {
             "name": "Responsive Web Design",
             "organization": "Udacity",
             "date": "November 2023",
-            "url": ""
+            "url": "https://drive.google.com/file/d/1CWpeutG9viTGDljEycQ9WEafjItQHrGB/view?usp=sharing"
         },
         {
             "name": "React.js Development",
             "organization": "Udemy",
             "date": "August 2023",
-            "url": ""
+            "url": "https://drive.google.com/file/d/1CWpeutG9viTGDljEycQ9WEafjItQHrGB/view?usp=sharing"
         }
     ],
     "personal_projects": [
         {
-            "name": "Responsive Portfolio Website",
-            "description": "Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my work and skills. Implemented responsive design and optimized for mobile.",
-            "image": "https://placehold.co/120x70",
+            "name": "Weather Dashboard",
+            "description": "Developed a dynamic weather app where users can check real-time weather data for any city, powered by the OpenWeather API.",
+            "image": "images/weather-app.png",
             "tags": [
-                "HTML",
+                "JavaScript",
                 "CSS",
-                "JavaScript",
-                "Responsive Design"
-            ]
-        },
-        {
-            "name": "Weather App",
-            "description": "Created a weather forecasting application using JavaScript and the OpenWeather API. Users can search for any city to get current weather information.",
-            "image": "https://placehold.co/120x70",
-            "tags": [
-                "JavaScript",
                 "API Integration",
-                "CSS",
                 "Weather API"
-            ]
+            ],
+            "url": "https://kennyale.github.io/weather-app/",
+            "repo": "https://github.com/KennyAle/weather-app"
         },
         {
-            "name": "Task Manager",
-            "description": "Built a task manager app with React that allows users to add, edit, and delete tasks. Used local storage to save data persistently.",
-            "image": "https://placehold.co/120x70",
+            "name": "To-Do List App",
+            "description": "Designed a to-do list application with React, allowing users to manage tasks with persistent data using local storage.",
+            "image": "images/todo-app.png",
             "tags": [
                 "React",
                 "Local Storage",
                 "JavaScript",
                 "CSS"
-            ]
+            ],
+            "url": "https://kennyale.github.io/todo-app/",
+            "repo": "https://github.com/KennyAle/todo-app"
         },
         {
-            "name": "E-commerce Web Application",
-            "description": "Developed a full-stack e-commerce app with React, Node.js, and MongoDB, featuring product listings, shopping cart, and user authentication.",
-            "image": "https://placehold.co/120x70",
-            "tags": [
-                "React",
-                "Node.js",
-                "Express",
-                "MongoDB"
-            ]
-        },
-        {
-            "name": "Personal Blog",
-            "description": "Built a personal blog platform with user authentication and content management system, where users can create and manage posts.",
-            "image": "https://placehold.co/120x70",
+            "name": "Movie Finder SPA",
+            "description": "Implemented a single-page movie search app with JavaScript, allowing users to browse and discover movies interactively.",
+            "image": "images/movie-app.png",
             "tags": [
                 "HTML",
                 "CSS",
                 "JavaScript",
-                "Firebase"
-            ]
+                "Movie API"
+            ],
+            "url": "https://kennyale.github.io/movie-spa/",
+            "repo": "https://github.com/KennyAle/movie-spa"
+        },
+        {
+            "name": "Italian Restaurant Website",
+            "description": "Created a website for an Italian restaurant, focusing on layout and design that reflects the cuisine and ambiance.",
+            "image": "images/restaurant-page.png",
+            "tags": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Responsive Design"
+            ],
+            "url": "https://kennyale.github.io/italian-restaurant/",
+            "repo": "https://github.com/KennyAle/italian-restaurant"
+        },
+        {
+            "name": "Perfume Showcase Grid",
+            "description": "Built a responsive product grid for perfume displays, using CSS grid for an elegant layout suitable for e-commerce.",
+            "image": "images/perfume-page.png",
+            "tags": [
+                "React",
+                "CSS Grid",
+                "JavaScript",
+                "Responsive Design"
+            ],
+            "url": "https://kennyale.github.io/responsive-grid-showcase",
+            "repo": "https://github.com/KennyAle/responsive-grid-showcase"
+        },
+        {
+            "name": "Discover Ecuador",
+            "description": "Created a web page highlighting the beauty of Ecuador, using responsive design for an engaging user experience.",
+            "image": "images/ecuador-page.png",
+            "tags": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Responsive Design"
+            ],
+            "url": "https://kennyale.github.io/my-country/",
+            "repo": "https://github.com/KennyAle/my-country"
         }
     ],
     "education": [

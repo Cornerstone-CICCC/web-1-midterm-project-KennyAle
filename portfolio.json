@@ -3,7 +3,7 @@
         "name": "Kenny Viver",
         "title": "Front End Developer",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cumque quod explicabo deserunt fugit laborum ipsum dolor sit amet.",
-        "picture": "images/profile.jpg",
+        "picture": "images/profile.webp",
         "location": "Vancouver, British Columbia, CA",
         "socials": [
             [
@@ -24,7 +24,7 @@
                 "linkedin",
                 "/kenny.viver",
                 "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"stroke-linejoin=\"round\"class=\"icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" /><path d=\"M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z\" /><path d=\"M8 11l0 5\" /><path d=\"M8 8l0 .01\" /><path d=\"M12 16l0 -5\" /><path d=\"M16 16v-3a2 2 0 0 0 -4 0\" /></svg>",
-                "linkedin.com"
+                "https://ca.linkedin.com/"
             ],
             [
                 "github",
@@ -37,7 +37,7 @@
                 "instagram",
                 "/viver.kenny",
                 "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\" stroke-linecap=\"round\"stroke-linejoin=\"round\"class=\"icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram\"><path stroke=\"none\" d=\"M0 0h24v24H0z\" fill=\"none\" /><path d=\"M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z\" /><path d=\"M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0\" /><path d=\"M16.5 7.5l0 .01\" /></svg>",
-                "instagram.com"
+                "https://www.instagram.com/"
             ]
         ]
     },
@@ -126,7 +126,7 @@
         {
             "name": "Weather Dashboard",
             "description": "Developed a dynamic weather app where users can check real-time weather data for any city, powered by the OpenWeather API.",
-            "image": "images/weather-app.png",
+            "image": "images/weather-app.webp",
             "tags": [
                 "JavaScript",
                 "CSS",
@@ -139,7 +139,7 @@
         {
             "name": "To-Do List App",
             "description": "Designed a to-do list application with React, allowing users to manage tasks with persistent data using local storage.",
-            "image": "images/todo-app.png",
+            "image": "images/todo-app.webp",
             "tags": [
                 "React",
                 "Local Storage",
@@ -152,7 +152,7 @@
         {
             "name": "Movie Finder SPA",
             "description": "Implemented a single-page movie search app with JavaScript, allowing users to browse and discover movies interactively.",
-            "image": "images/movie-app.png",
+            "image": "images/movie-app.webp",
             "tags": [
                 "HTML",
                 "CSS",
@@ -165,7 +165,7 @@
         {
             "name": "Italian Restaurant Website",
             "description": "Created a website for an Italian restaurant, focusing on layout and design that reflects the cuisine and ambiance.",
-            "image": "images/restaurant-page.png",
+            "image": "images/restaurant-page.webp",
             "tags": [
                 "HTML",
                 "CSS",
@@ -178,7 +178,7 @@
         {
             "name": "Perfume Showcase Grid",
             "description": "Built a responsive product grid for perfume displays, using CSS grid for an elegant layout suitable for e-commerce.",
-            "image": "images/perfume-page.png",
+            "image": "images/perfume-page.webp",
             "tags": [
                 "React",
                 "CSS Grid",
@@ -191,7 +191,7 @@
         {
             "name": "Discover Ecuador",
             "description": "Created a web page highlighting the beauty of Ecuador, using responsive design for an engaging user experience.",
-            "image": "images/ecuador-page.png",
+            "image": "images/ecuador-page.webp",
             "tags": [
                 "HTML",
                 "CSS",

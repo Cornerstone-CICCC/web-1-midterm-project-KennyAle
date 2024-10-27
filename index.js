@@ -21,6 +21,7 @@ async function fetchData() {
         console.log("Error fetching data")
     } else {
         portfolioData = await response.json()
+        addMeta()
         heroSection()
         skillSection()
         workSection()
@@ -29,6 +30,13 @@ async function fetchData() {
         certificateSection()
         educationSection()
     }
+}
+
+function addMeta() {
+    let metaDescription = document.createElement('meta')
+    metaDescription.name = "description"
+    metaDescription.content = portfolioData.info.description
+    document.head.appendChild(metaDescription) 
 }
 
 function heroSection() {
@@ -49,7 +57,7 @@ function heroSection() {
     portfolioData.info.socials.forEach(element => {
         let social = document.createElement("li")
         social.innerHTML = `
-            <a href="${element[3]}">
+            <a href="${element[3]}" target="_blank" aria-label="${element[0]}">
             ${element[2]}
             </a>
             `
@@ -62,7 +70,7 @@ function heroSection() {
         if (element.includes("print")) {
             let social = document.createElement("li")
             social.innerHTML = `
-            <a>
+            <a href="${element[3]} aria-label="${element[0]}">
             ${element[2]}${element[1]}
             </a>
             `
@@ -157,7 +165,7 @@ function certificateSection() {
         certLi.innerHTML = `
             <a href="${certificate.url}" target="_blank">
                 <p>${certificate.name}</p>
-                <h4>${certificate.date}</h4>
+                <span class="date">${certificate.date}</span>
             </a>
         `
         certificatesList.appendChild(certLi)
@@ -176,9 +184,9 @@ function projectSection() {
     portfolioData.personal_projects.forEach(element => {
         let project = document.createElement("article")
         project.innerHTML = `
-            <a class="github" href="${element.repo}" target="_blank">${icons.github}</a>
+            <a class="github" href="${element.repo}" target="_blank" rel="noopener noreferrer" aria-label="${element.name}">${icons.github}</a>
             <a href="${element.url}" target="_blank"><img src="${element.image}" alt="Prophile Picture"></a>
-            <h4>${element.name}</h4>
+            <h2>${element.name}</h2>
             <p>${element.description}</p>
         `
         let projectCont = document.createElement("ul")

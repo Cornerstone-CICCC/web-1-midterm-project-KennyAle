@@ -9,7 +9,7 @@
         margin-top: auto;
     }
     .hero figure img {
-        display: block;
+        display: none;
     }
     .hero .socials {
         display: none;

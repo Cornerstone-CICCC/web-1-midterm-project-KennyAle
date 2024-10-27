@@ -58,7 +58,8 @@
     text-wrap: pretty;
 }
 
-.projects article h4 {
+.projects article h2 {
+    font-size: 1.2rem;
     cursor: default;
 }
 

@@ -37,8 +37,7 @@
     cursor: pointer;
 }
 
-.certificates li h4 {
-    color: gray;
+.certificates li .date {
     font-style: italic;
     font-weight: normal;
     font-size: 0.9rem;

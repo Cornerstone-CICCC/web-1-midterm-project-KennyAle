@@ -1,0 +1,22 @@
+/* Small devices (tablets, 768px and up) */
+@media all and (max-width: 768px) { 
+    .hero figure img{
+        display: none;
+    }
+
+    .projects article{
+        flex-basis: auto;
+    }
+ }
+
+@media all and (max-width: 480px){
+    .certificates ul {
+        flex-direction: column;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+/* @media (min-width: 992px) { ... } */
+
+/* Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) { ... } */

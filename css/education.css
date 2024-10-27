@@ -1,0 +1,55 @@
+.education ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-inline: 1rem;
+}
+
+.education ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+}
+
+.education ul li::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0.7rem;
+    left: -0.8rem;
+}
+
+.education ul li::after {
+    content: "";
+    width: 0.09rem;
+    height: calc(100% + 0.7rem);
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 1rem;
+    left: -0.65rem;
+}
+
+.education ul li:last-child::after {
+    content: "";
+    width: 0;
+}
+
+.education ul div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.education li h4 {
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.education p {
+    text-wrap: pretty;
+}

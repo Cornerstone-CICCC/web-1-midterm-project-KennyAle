@@ -1,0 +1,243 @@
+const icons = {
+    location: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>`,
+    github: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="currentColor"
+                    class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" />
+                </svg>`
+}
+
+let portfolioData
+async function fetchData() {
+    const response = await fetch('portfolio.json')
+    if (response.status == 404) {
+        console.log("Error fetching data")
+    } else {
+        portfolioData = await response.json()
+        addMeta()
+        heroSection()
+        skillSection()
+        workSection()
+        expertiseSection()
+        projectSection()
+        certificateSection()
+        educationSection()
+    }
+}
+
+function addMeta() {
+    let metaDescription = document.createElement('meta')
+    metaDescription.name = "description"
+    metaDescription.content = portfolioData.info.description
+    document.head.appendChild(metaDescription) 
+}
+
+function heroSection() {
+    const hero = document.createElement("section")
+    hero.classList.add("hero", "container")
+    const article = document.createElement("article")
+    article.innerHTML = `
+        <h1>${portfolioData.info.name}</h1>
+        <h2>${portfolioData.info.title}</h2>
+        <p>${portfolioData.info.description}</p>
+        <span>
+            ${icons.location}
+            <p>${portfolioData.info.location}</p>
+        </span>
+        `
+    const socialsContainer = document.createElement("ul")
+    socialsContainer.classList.add("socials")
+    portfolioData.info.socials.forEach(element => {
+        let social = document.createElement("li")
+        social.innerHTML = `
+            <a href="${element[3]}" target="_blank" aria-label="${element[0]}">
+            ${element[2]}
+            </a>
+            `
+        socialsContainer.appendChild(social)
+    })
+
+    const socialsPrint = document.createElement("ul")
+    socialsPrint.classList.add("socials-print")
+    portfolioData.info.socials.forEach(element => {
+        if (element.includes("print")) {
+            let social = document.createElement("li")
+            social.innerHTML = `
+            <a href="${element[3]} aria-label="${element[0]}">
+            ${element[2]}${element[1]}
+            </a>
+            `
+            socialsPrint.appendChild(social)
+        }
+
+    })
+
+    const heroPicture = document.createElement("figure")
+    heroPicture.innerHTML = `
+    <img src="${portfolioData.info.picture}" alt="Prophile Picture">
+    `
+
+    article.appendChild(socialsPrint)
+    article.appendChild(socialsContainer)
+    hero.appendChild(article)
+    hero.appendChild(heroPicture)
+    document.body.appendChild(hero)
+}
+
+function expertiseSection() {
+    const expertise = document.createElement("section")
+    expertise.classList.add("expertise", "container")
+    expertise.innerHTML = `
+        <h2 class="title">Areas of Expertise</h2>
+    `
+    const list = document.createElement("ul")
+    portfolioData.expertise.forEach(element => {
+        let expertiseLi = document.createElement("li")
+        expertiseLi.innerHTML = element
+        list.appendChild(expertiseLi)
+    })
+
+    expertise.appendChild(list)
+    document.body.appendChild(expertise)
+}
+
+function workSection() {
+    const workExperience = document.createElement("section")
+    workExperience.classList.add("work-experience", "container")
+    workExperience.innerHTML = `
+        <h2 class="title">Work Experience</h2>
+    `
+    portfolioData.work_experience.forEach(element => {
+        let job = document.createElement("article")
+        job.innerHTML = `
+            <h2>${element.position}</h2>
+            <h3>${element.company}</h3>
+            <div>
+                <h4>${element.startDate} - ${element.endDate}</h4>
+                <h4>${element.location}</h4>
+            </div>
+        `
+        let respCont = document.createElement("ul")
+        element.responsibilities.forEach(resp => {
+            let respItem = document.createElement("li")
+            respItem.innerHTML = resp
+            respCont.appendChild(respItem)
+        })
+
+        job.appendChild(respCont)
+        workExperience.appendChild(job)
+    })
+    document.body.appendChild(workExperience)
+}
+
+function skillSection() {
+    const skills = document.createElement("section")
+    skills.classList.add("technologies", "container")
+    skills.innerHTML = `
+        <h2 class="title">Technical Skills</h2>
+    `
+    let skillsList = document.createElement("ul")
+    portfolioData.technical_skills.forEach(skill => {
+        let skillLi = document.createElement("li")
+        skillLi.innerHTML = skill
+        skillsList.appendChild(skillLi)
+    })
+    skills.appendChild(skillsList)
+    document.body.appendChild(skills)
+}
+
+function certificateSection() {
+    const certificate = document.createElement("section")
+    certificate.classList.add("certificates", "container")
+    certificate.innerHTML = `
+        <h2 class="title">Courses & Certificates</h2>
+    `
+    let certificatesList = document.createElement("ul")
+    portfolioData.certificates.forEach(certificate => {
+        let certLi = document.createElement("li")
+        certLi.innerHTML = `
+            <a href="${certificate.url}" target="_blank">
+                <p>${certificate.name}</p>
+                <span class="date">${certificate.date}</span>
+            </a>
+        `
+        certificatesList.appendChild(certLi)
+    })
+
+    certificate.appendChild(certificatesList)
+    document.body.appendChild(certificate)
+}
+
+function projectSection() {
+    const projects = document.createElement("section")
+    projects.classList.add("projects", "container")
+    projects.innerHTML = `
+        <h2 class="title">Personal Projects</h2>
+    `
+    portfolioData.personal_projects.forEach(element => {
+        let project = document.createElement("article")
+        project.innerHTML = `
+            <a class="github" href="${element.repo}" target="_blank" rel="noopener noreferrer" aria-label="${element.name}">${icons.github}</a>
+            <a href="${element.url}" target="_blank"><img src="${element.image}" alt="Prophile Picture"></a>
+            <h2>${element.name}</h2>
+            <p>${element.description}</p>
+        `
+        let projectCont = document.createElement("ul")
+        projectCont.classList.add("tags")
+        element.tags.forEach(tag => {
+            let projectItem = document.createElement("li")
+            projectItem.innerHTML = tag
+            projectCont.appendChild(projectItem)
+        })
+
+        project.appendChild(projectCont)
+        projects.appendChild(project)
+    })
+    document.body.appendChild(projects)
+}
+
+function educationSection() {
+    const education = document.createElement("section")
+    education.classList.add("education", "container")
+    education.innerHTML = `
+        <h2 class="title">Education</h2>
+    `
+    let educationList = document.createElement("ul")
+    portfolioData.education.forEach(school => {
+        let eduLi = document.createElement("li")
+        eduLi.innerHTML = `
+                <h3>${school.career}</h3>
+                <div>
+                    <h4>${school.institution}</h4>
+                    <h4>${school.duration}</h4>
+                </div>
+                <p>${school.details[0]}</p>
+                <p>${school.details[1]}</p>
+        `
+        educationList.appendChild(eduLi)
+    })
+
+    education.appendChild(educationList)
+    document.body.appendChild(education)
+}
+
+fetchData()
+
+
+
+// fetch("portfolio.json")
+//   .then(response => response.json())
+//   .then(portfolio => {
+//     portfolioData = portfolio
+//     console.log(portfolio);
+//   });
+//   console.log(portfolioData)
+
+

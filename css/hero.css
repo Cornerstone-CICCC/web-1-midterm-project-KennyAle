@@ -1,0 +1,70 @@
+.hero {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.hero p {
+    text-wrap: pretty;
+}
+
+.hero h1 {
+    opacity: 0.6;
+    font-size: 2rem;
+}
+
+.hero h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.hero img {
+    border-radius: 10px;
+    width: 120px;
+}
+
+.hero span {
+    margin-inline: -0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.hero .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.hero span p {
+    text-decoration: underline;
+}
+
+.hero li {
+    margin-top: 0.5rem;
+}
+
+.hero li a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero .socials-print {
+    display: none;
+}
+
+.hero .socials a {
+    padding: 0.25rem;
+    transition: transform 110ms ease-out;
+}
+
+.hero .socials a:hover {
+    padding: 0.25rem;
+    transform: scale(1.3);
+}

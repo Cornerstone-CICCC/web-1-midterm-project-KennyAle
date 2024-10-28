@@ -23,6 +23,7 @@ async function fetchData() {
         portfolioData = await response.json()
         addMeta()
         heroSection()
+        aboutSection()
         skillSection()
         workSection()
         expertiseSection()
@@ -89,6 +90,17 @@ function heroSection() {
     hero.appendChild(article)
     hero.appendChild(heroPicture)
     document.body.appendChild(hero)
+}
+
+function aboutSection() {
+    const about = document.createElement("section")
+    about.classList.add("about", "container")
+    about.innerHTML = `
+        <h2 class="title">About</h2>
+        <p>${portfolioData.info.about}</p>
+        `
+
+    document.body.appendChild(about)
 }
 
 function expertiseSection() {

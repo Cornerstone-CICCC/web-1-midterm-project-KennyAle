@@ -8,9 +8,11 @@
     .hero li {
         margin-top: auto;
     }
+
     .hero figure img {
         display: none;
     }
+
     .hero .socials {
         display: none;
     }
@@ -26,11 +28,7 @@
         flex-basis: 40%;
     }
     
-    .work-experience {
-        break-after: page;
-    }
-
-    .projects {
+    .projects article:first-of-type{
         break-after: page;
     }
 

@@ -18,6 +18,11 @@ h1, h2, h3, p {
     cursor: default;
 }
 
+p {
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+}
+
 body {
     font-family: system-ui, sans-serif;
     padding: 1rem;

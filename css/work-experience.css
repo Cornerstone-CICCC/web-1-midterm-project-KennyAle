@@ -12,6 +12,10 @@
     padding-bottom: 0;
 }
 
+.work-experience article h3 {
+    padding: 0.6rem 0;
+}
+
 .work-experience article div {
     display: flex;
     justify-content: space-between;

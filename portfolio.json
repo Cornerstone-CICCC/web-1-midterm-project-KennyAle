@@ -2,9 +2,10 @@
     "info": {
         "name": "Kenny Viver",
         "title": "Front End Developer",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cumque quod explicabo deserunt fugit laborum ipsum dolor sit amet.",
+        "description": "Aspiring front-end developer with a passion for creating responsive, dynamic web applications and learning new technologies",
         "picture": "images/profile.webp",
         "location": "Vancouver, British Columbia, CA",
+        "about": "Currently a web development student with a strong interest in crafting user-friendly interfaces and enhancing skills in modern JavaScript frameworks. This portfolio reflects a commitment to effective design and functional code, showcasing recent projects built with a focus on responsive layouts and accessibility.",
         "socials": [
             [
                 "email",
